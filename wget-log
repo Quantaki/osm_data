@@ -1,0 +1,18 @@
+--2023-08-08 21:10:27--  https://download.geofabrik.de/africa/algeria-latest.osm.pbf
+Resolving download.geofabrik.de (download.geofabrik.de)... 65.109.50.43, 65.109.48.72
+Connecting to download.geofabrik.de (download.geofabrik.de)|65.109.50.43|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 238262809 (227M) [application/octet-stream]
+Saving to: ‘/home/betorcha/Ml_projects/Osm/data/algeria.osm.pbf’
+
+
+
+2023-08-08 21:31:21 (9.55 KB/s) - Read error at byte 12204130/238262809 (Connection timed out). Retrying.
+
+--2023-08-08 21:31:22--  (try: 2)  https://download.geofabrik.de/africa/algeria-latest.osm.pbf
+Connecting to download.geofabrik.de (download.geofabrik.de)|65.109.50.43|:443... connected.
+HTTP request sent, awaiting response... 206 Partial Content
+Length: 238262809 (227M), 226058679 (216M) remaining [application/octet-stream]
+Saving to: ‘/home/betorcha/Ml_projects/Osm/data/algeria.osm.pbf’
+
+.pbf                       8%[+>                                 ]  19.33M   233KB/s    eta 1h 48m pbf                        8%[+>                                 ]  19.34M   221KB/s    eta 1h 48m bf                         8%[+>                                 ]  19.36M   207KB/s    eta 1h 48m f                          8%[+=>                                ]  19.99M   325KB/s    eta 1h 48m                            8%[+=>                                ]  20.02M   335KB/s    eta 1h 48m                        /   8%[+=>                                ]  20.03M   305KB/s    eta 99m 58s                      /h   8%[+=>                                ]  20.08M   294KB/s    eta 99m 58s                     /ho   8%[+=>                                ]  20.14M   282KB/s    eta 99m 58s                    /hom   8%[+=>                                ]  20.18M   296KB/s    eta 98m 36s                   /home   8%[+=>                                ]  20.25M   276KB/s    eta 98m 36s                  /home/   8%[+=>                                ]  20.29M   270KB/s    eta 98m 36s                 /home/b   8%[+=>                                ]  20.33M   261KB/s    eta 98m 36s                /home/be   8%[+=>                                ]  20.36M   271KB/s    eta 98m 36s               /home/bet   8%[+=>                                ]  20.37M   223KB/s    eta 97m 7s               /home/beto   8%[+=>                                ]  20.39M   225KB/s    eta 97m 7s              /home/betor   8%[+=>                                ]  20.39M   190KB/s    eta 97m 25s            /home/betorc   8%[+=>                                ]  20.39M   164KB/s    eta 97m 25s           /home/betorch   8%[+=>                                ]  20.39M   145KB/s    eta 98m 10s          /home/betorcha   8%[+=>                                ]  20.39M   130KB/s    eta 98m 10s         /home/betorcha/   8%[+=>                                ]  20.39M   118KB/s    eta 98m 55s

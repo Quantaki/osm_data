@@ -1,0 +1,6 @@
+data/algeria_osm.sqlite
+data/algeria.osm.pbf
+data/dz_decoupage.db
+osm_wilayats_sqlite/osm_Algiers.db
+osm_wilayats_sqlite/osm_Blida.db
+osm_wilayats_sqlite/osm_Djelfa.db
