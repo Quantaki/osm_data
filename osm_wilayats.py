@@ -6,7 +6,7 @@ import sqlite3
 from shapely import wkt
 from shapely import make_valid
 from shapely.errors import GEOSException
-
+from send_email import send_email
 
 
 def size_sqlite_table(table_name, con) : 
@@ -86,20 +86,28 @@ tables = ['lines', 'points', 'multilinestrings', 'multipolygons', 'other_relatio
 
 
 if __name__ == '__main__' :
+
+    try : 
         
-    for wilaya in wilayats : 
-        print('-' *5, f'{wilaya}', '-' *5)
-        df_wilaya = []
+        for wilaya in wilayats : 
+            print('-' *5, f'{wilaya}', '-' *5)
+            df_wilaya = []
 
-        for osm_table_name  in tables : 
+            for osm_table_name  in tables : 
 
-            df = gpd_osm_within_wilaya(osm_table_name, wilaya)
-            df_wilaya.append(df)
-        
-        df_wilaya = pd.concat(df_wilaya, ignore_index=True)
-        conn = sqlite3.connect(f'/home/betorcha/Ml_projects/osm_data/osm_wilayats_sqlite/osm_{wilaya}.db')
-        df_wilaya.to_sql(f'osm_{wilaya}', conn, if_exists = 'replace', index = False)
-        print(f'osm {wilaya} data succesfuly saved!')
+                df = gpd_osm_within_wilaya(osm_table_name, wilaya)
+                df_wilaya.append(df)
+            
+            df_wilaya = pd.concat(df_wilaya, ignore_index=True)
+            conn = sqlite3.connect(f'/home/betorcha/Ml_projects/osm_data/osm_wilayats_sqlite/osm_{wilaya}.db')
+            df_wilaya.to_sql(f'osm_{wilaya}', conn, if_exists = 'replace', index = False)
+            print(f'osm {wilaya} data succesfuly saved!')
 
-        del df_wilaya, df, conn
-        _ = gc.collect()
+            del df_wilaya, df, conn
+            _ = gc.collect()
+    
+    except Exception as e :
+
+        subject = f"Error in cron job osm_data"
+        body = f"An error occurred: {str(e)}"
+        send_email(subject, body)
