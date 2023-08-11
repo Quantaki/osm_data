@@ -30,6 +30,6 @@ def send_email(subject, body):
         server.sendmail(sender_email, receiver_email, message.as_string())
         server.quit()
 
-        print("Email notification sent successfully!")
+        print("Email notification sent successfully !")
     except Exception as e:
         print(f"Error sending email notification: {str(e)}")
